@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 namespace DataTerminalProject
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace DataTerminalProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.StartAppBtn = new System.Windows.Forms.Button();
             this.RestartBtn = new System.Windows.Forms.Button();
             this.ShutDownBtn = new System.Windows.Forms.Button();
