@@ -34,6 +34,7 @@ namespace DataTerminalProject
             this.StartAppBtn = new System.Windows.Forms.Button();
             this.RestartBtn = new System.Windows.Forms.Button();
             this.ShutDownBtn = new System.Windows.Forms.Button();
+            this.errMessageLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StartAppBtn
@@ -78,21 +79,34 @@ namespace DataTerminalProject
             this.ShutDownBtn.UseVisualStyleBackColor = false;
             this.ShutDownBtn.Click += new System.EventHandler(this.ShutDownBtn_Click);
             // 
-            // Form1
+            // errMessageLabel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.errMessageLabel.AutoSize = true;
+            this.errMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(198)))), ((int)(((byte)(214)))));
+            this.errMessageLabel.Location = new System.Drawing.Point(168, 392);
+            this.errMessageLabel.Name = "errMessageLabel";
+            this.errMessageLabel.Size = new System.Drawing.Size(0, 20);
+            this.errMessageLabel.TabIndex = 3;
+            this.errMessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(618, 424);
+            this.Controls.Add(this.errMessageLabel);
             this.Controls.Add(this.ShutDownBtn);
             this.Controls.Add(this.RestartBtn);
             this.Controls.Add(this.StartAppBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DTRunner";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,6 +120,8 @@ namespace DataTerminalProject
 
         //remove the entire system menu:
         private const int WS_SYSMENU = 0x80000;
+        private Label errMessageLabel;
+
         protected override CreateParams CreateParams
         {
             get
